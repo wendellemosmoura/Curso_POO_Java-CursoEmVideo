@@ -6,6 +6,7 @@ public class Main {
         c.ligar();
         c.maisVolume();
         c.play();
+        c.pause();
         c.abrirMenu();
         c.fecharMenu();
     }

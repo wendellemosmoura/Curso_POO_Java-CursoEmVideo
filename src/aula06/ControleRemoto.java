@@ -1,6 +1,6 @@
 package aula06;
 
-public class ControleRemoto implements Controlador{
+public class ControleRemoto implements Controlador {
     // Atributos
     private int volume;
     private boolean ligado;
@@ -13,27 +13,27 @@ public class ControleRemoto implements Controlador{
         tocando = false;
     }
 
-    public int getVolume() {
+    private int getVolume() {
         return volume;
     }
 
-    public void setVolume(int volume) {
+    private void setVolume(int volume) {
         this.volume = volume;
     }
 
-    public boolean getLigado() {
+    private boolean getLigado() {
         return ligado;
     }
 
-    public void setLigado(boolean ligado) {
+    private void setLigado(boolean ligado) {
         this.ligado = ligado;
     }
 
-    public boolean getTocando() {
+    private boolean getTocando() {
         return tocando;
     }
 
-    public void setTocando(boolean tocando) {
+    private void setTocando(boolean tocando) {
         this.tocando = tocando;
     }
 
@@ -52,9 +52,9 @@ public class ControleRemoto implements Controlador{
     public void abrirMenu() {
         System.out.println("Está ligado? " + getLigado());
         System.out.println("Está tocando? " + getTocando());
-        System.out.print("Volume" + getVolume());
-        for (int i =0; i <= getVolume(); i+=10) {
-            System.out.print("[]");
+        System.out.print("Volume " + getVolume());
+        for (int i = 0; i <= getVolume(); i += 10) {
+            System.out.print("|");
         }
     }
 
