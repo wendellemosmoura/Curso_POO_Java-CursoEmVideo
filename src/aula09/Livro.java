@@ -12,11 +12,13 @@ public class Livro implements Publicacao{
     public String detalhes() {
         return "Livro{" +
                 "titulo='" + titulo + '\'' +
-                ", autor='" + autor + '\'' +
-                ", totPaginas=" + totPaginas +
-                ", pagAtual=" + pagAtual +
-                ", aberto=" + aberto +
-                ", leitor=" + leitor +
+                "\n, autor='" + autor + '\'' +
+                "\n, totPaginas=" + totPaginas +
+                "\n, pagAtual=" + pagAtual +
+                "\n, aberto=" + aberto +
+                "\n, leitor=" + leitor.getNome() +
+                "\n, idade=" + leitor.getIdade() +
+                "\n, sexo=" + leitor.getSexo() +
                 '}';
     }
 
@@ -87,7 +89,11 @@ public class Livro implements Publicacao{
 
     @Override
     public void folhear( int p) {
-        pagAtual = p;
+        if (p > totPaginas) {
+            pagAtual = 0;
+        } else {
+            pagAtual = p;
+        }
     }
 
     @Override
